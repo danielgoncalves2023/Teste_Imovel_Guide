@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Imovel Guide</title>
+    <link rel="stylesheet" href="/style/global.css">
+    <link rel="stylesheet" href="/style/style.css">
+    <!-- Font Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="navLeft">
+                <img src="/src/img/logo_imovelguide.png" alt="Logo Imovel Guide">
+                <ul>
+                    <li>Condomínios</li>
+                    <li>Fórum</li>
+                    <li>Guia</li>
+                    <li>Artigos</li>
+                    <li>Ferramentas</li>
+                </ul>
+            </div>
+            <div id="navRight">
+                <ul>
+                    <li>Cotar Imóvel</li>
+                    <li>Planos</li>
+                    <li>Entrar</li>
+                    <li id="btn">CADASTRE-SE</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="mainContainer">
+        <!-- {1} CORRETORES -->
+        <div id="area1">
+            <!-- Corretor 1 -->
+            <div class="divCorretor">
+                <div id="imageCorretora">
+                    <div class="imageContainer">
+                        <img class="imageCorretor" src="/src/img/corretora.jpg" alt="Corretora Fulana">
+                    </div>
+                </div>
+                <div class="corretorInfo">
+                    <h4 class="fontNomeCorretor">Nome corretora</h4>
+                    <p class="fontePontos">3.000 pontos</p>
+                    <p class="fontVerContato" id="contatoCorretora">ver contato</p>
+                </div>
+            </div>
+            <!-- Corretor 2 -->
+            <div class="divCorretor">
+                <div id="imageCorretor">
+                    <div class="imageContainer">
+                        <img class="imageCorretor" src="/src/img/corretor.jpg" alt="Corretor Fulano">
+                    </div>
+                </div>
+                <div class="corretorInfo">
+                    <h4 class="fontNomeCorretor">Corretor nome</h4>
+                    <p class="fontePontos">1.260 pontos</p>
+                    <p class="fontVerContato" id="contatoCorretor">ver contato</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- {2} MANDE UMA MENSAGEM -->
+        <div id="area2">
+            <h2>Mande uma mensagem:</h2>
+            <form id="form" action="#" method="get">
+                <input required type="text" id="cpfInput" placeholder="Digite seu CPF"
+                    onkeyup="mascara('###.###.###-##',this,event,true)">
+                <br><br>
+                <input required type="tel" id="telInput" placeholder="Digite seu telefone"
+                    onkeyup="mascara('(##)#####-####',this,event,true)">
+                <br><br>
+                <textarea name="coments" id="" cols="30" rows="4" placeholder="Digite o assunto"></textarea>
+                <br><br>
+                <button onclick="enviarMensagem()">Enviar Mensagem</button>
+            </form>
+        </div>
+
+        <!-- {3} REGRA DE 3 -->
+        <div id="area3">
+            <div>
+                <h2>Regra de 3</h2>
+            </div>
+            <div>
+                <form action="#">
+                    <input id="number1" type="number" placeholder="60">
+                    -
+                    <input id="number2" type="number" placeholder="100">
+                    <br><br>
+                    <input id="number3" type="number" placeholder="30">
+                    -
+                    <input id="number4" type="number" disabled>
+                    <br><br><br>
+                    <button onclick="calcular()">Calcular</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- {4} MODAL -->
+        <div id="area4">
+            <img src="/src/img/casa.jpg" alt="Casa">
+            <button onclick="abrirModal()">ABRIR IMAGEM NO MODAL</button>
+        </div>
+
+        <!-- {5} DOWNLOAD -->
+        <div id="area5">
+            <div id="area5div1">
+                <img src="/src/img/casa.jpg" alt="Casa">
+                <button id="btnImovelGuide">Imovel Guide</button>
+            </div>
+            <button id="btnDownload" onclick="downloadArea5()">Download</button>
+        </div>
+
+        <!-- {6} ZOOM NA IMAGEM -->
+        <div id="area6">
+            <img src="/src/img/casa.jpg" alt="Casa">
+        </div>
+    </section>
+
+    <!-- MODAL -->
+    <section id="modal">
+        <div id="modalContainer">
+            <div id="closeModal">
+                <!-- Botão fechar modal -->
+                <p onclick="fecharModal()">X</p>
+            </div>
+            <div id="imageModal">
+                <img src="/src/img/casa.jpg" alt="Casa">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footerRow">
+            <p>Termos</p>
+            <p>Contatos</p>
+            <p>Sobre</p>
+        </div>
+        <div class="footerRow">
+            <h4>© Copyright 2022. Todos os direitos reservados</h4>
+            <img src="/src/img/logo_imovelguide.png" alt="Logo Imovel Guide">
+        </div>
+    </footer>
+
+    <script src="/script/main.js"></script>
+    <!-- Biblioteca de mascara de input (https://github.com/FlavioALeal/MascaraJS) -->
+    <script src="/script/mascara.min.js"></script>
+    <!-- HTML2Canvas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+</body>
+
+</html>

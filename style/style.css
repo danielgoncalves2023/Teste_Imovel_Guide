@@ -1,0 +1,438 @@
+:root {
+    --orange: #FE6613;
+    --blue: #1B2653;
+    --gray: #787878;
+}
+
+header {
+    background-color: var(--blue);
+    color: white;
+    font-size: 0.7rem;
+    padding: 0 40px;
+    height: 50px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#btn {
+    background-color: var(--blue);
+    color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    padding: 7px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background-color: rgb(2, 44, 136);
+}
+
+#navLeft {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav #navLeft img {
+    width: 90px;
+    margin-right: 40px;
+}
+
+#navRight {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    margin: 0 7px;
+    cursor: pointer;
+}
+
+ul li:hover {
+color: rgb(176, 197, 255);
+}
+
+/* Container principal */
+.mainContainer {
+    display: grid;
+    /* display: none; */
+
+    grid-template:
+    'area1 area2 area3'
+    'area4 area5 area6';
+    grid-gap: 50px;
+    place-content: center;
+    margin: 40px 0;
+    width: 100%;
+    height: auto;
+}
+
+#modal {
+    position: absolute;
+    height: 800px;
+    display: none;
+    top: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Container modal */
+#modalContainer {
+    margin: 50px;
+    background-color: white;
+}
+
+#modalContainer #closeModal {
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    border-bottom: 2px solid gray;
+    margin-bottom: 20px;
+}
+
+#modalContainer p {
+    color: red;
+    margin-right: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#imageModal {
+    display: grid;
+    place-content: center;
+    margin: 40px 0;
+}
+
+#modalContainer img {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.mainContainer #area1,
+.mainContainer #area2,
+.mainContainer #area3,
+.mainContainer #area4,
+.mainContainer #area5,
+.mainContainer #area6 {
+    position: relative;
+    width: 300px;
+}
+
+/* AREA 1 */
+#area1 {
+    grid-area: 'area1';
+    border: 1px solid black;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.divCorretor {
+    display: flex;
+    flex-direction: row;
+    margin: 5px 0;
+}
+
+#imageCorretora {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#imageCorretora::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/src/img/corretora.jpg);
+    background-size: 80%;
+    filter: blur(2px);
+    z-index: -1;
+}
+
+#imageCorretor {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#imageCorretor::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/src/img/corretor.jpg);
+    background-size: 80%;
+    filter: blur(2px);
+    z-index: -1;
+}
+
+.imageContainer {
+    width: 150px;
+    height: auto;
+}
+
+.imageCorretor {
+    display: flex;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.corretorInfo {
+    display: grid;
+    place-content: center;
+    padding-left: 10px;
+}
+
+.fontePontos {
+    font-size: 0.7rem;
+}
+
+.fontVerContato {
+    font-size: 0.6rem;
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* AREA 2 */
+#area2 {
+    grid-area: 'area2';
+    border: 1px solid black;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+#area2 h2 {
+    margin-bottom: 20px;
+}
+
+#area2 input {
+    width: 70%;
+    border-radius: 5px;
+}
+
+#area2 textarea {
+    border-radius: 5px;
+}
+
+input {
+    padding: 5px;
+    border-radius: 6px;
+    border: 1px solid gray;
+}
+
+#area2 form button {
+    background-color: var(--orange);
+    color: white;
+    padding: 6px;
+    border-radius: 7px;
+    border: none;
+}
+
+#area2 form button:hover {
+    background: orangered;
+}
+
+#area2 form button:active {
+    background: red;
+}
+
+/* AREA 3 */
+#area3 {
+    grid-area: 'area3';
+    border: 1px solid black;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+#area3 h2 {
+    margin-bottom: 50px;
+}
+
+#area3 input {
+    width: 100px;
+}
+
+#area3 form button {
+    width: 80px;
+    background-color: var(--orange);
+    color: white;
+    padding: 6px;
+    border-radius: 7px;
+    border: none;
+}
+
+#area3 form button:hover {
+    background: orangered;
+}
+
+#area3 form button:active {
+    background: red;
+}
+
+/* AREA 4 */
+#area4 {
+    grid-area: 'area4';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 7px;
+}
+
+#area4 img {
+    width: 100%;
+    height: 250px;
+}
+
+#area4 button {
+    margin: 10px 0;
+    background-color: var(--orange);
+    color: white;
+    padding: 6px;
+    border-radius: 7px;
+    border: none;
+}
+
+#area4 button:hover {
+    background: orangered;
+}
+
+#area4 button:active {
+    background: red;
+}
+
+/* AREA 5 */
+#area5 {
+    grid-area: 'area5';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 7px;
+}
+
+#area5div1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#area5div1 img {
+    width: 100%;
+    height: 250px;
+}
+
+#btnDownload {
+    position: sticky;
+    width: 50%;
+    margin: 10px auto;
+    background-color: var(--orange);
+    color: white;
+    padding: 6px;
+    border-radius: 7px;
+    border: none;
+}
+
+#btnDownload:hover {
+    background: orangered;
+}
+
+#btnDownload:active {
+    background: red;
+}
+
+#btnImovelGuide {
+    position: absolute;
+    bottom: 10px; /* Ajuste conforme necessário */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--orange); /* Cor com opacidade */
+    opacity: 0.8;
+    color: white;
+    padding: 10px 20px; /* Ajuste conforme necessário */
+    border: none;
+    border-radius: 5px;
+    z-index: 1; /* Garante que o botão esteja sobreposto à imagem */
+}
+
+#btnImovelGuide:hover {
+    background: orangered;
+}
+
+#btnImovelGuide:active {
+    background: red;
+}
+
+/* AREA 6 */
+#area6 {
+    grid-area: 'area6';
+    border-radius: 7px;
+}
+
+#area6 img {
+    width: 100%;
+    height: 250px;
+    transition: transform 1.5s;
+}
+
+#area6 img:hover {
+    transform: scale(1.3);
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blue);
+    height: 50px;
+    padding: 0 50px;
+    font-size: 0.7rem;
+    color: white;
+}
+
+footer .footerRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+footer .footerRow p {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+footer .footerRow p:hover {
+color: rgb(176, 197, 255);
+}
+
+footer .footerRow img {
+    width: 90px;
+    margin-left: 30px;
+}
+
+footer .footerRow h4 {
+    cursor: default;
+}
