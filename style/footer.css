@@ -1,0 +1,57 @@
+/* Rodapé da página */
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blue);
+    height: 50px;
+    padding: 0 50px;
+    font-size: 0.7rem;
+    color: white;
+}
+
+footer .footerRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+footer .footerRow p {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+footer .footerRow p:hover {
+color: rgb(176, 197, 255);
+}
+
+footer .footerRow img {
+    width: 90px;
+    margin-left: 30px;
+}
+
+footer .footerRow h4 {
+    cursor: default;
+    text-align: center;
+}
+
+/* Correção Responsiva do Footer */
+@media only screen and (max-width: 670px){
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 70px;
+        padding: 5px 20px 5px;
+    }
+
+    footer .footerRow img {
+        width: 85px;
+        margin-left: 30px;
+    }
+
+    .footerRow {
+        margin-top: 5px;
+    }
+}

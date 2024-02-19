@@ -68,11 +68,8 @@ function downloadArea5() {
 }
 
 // Menu Hamburger
-document.addEventListener('DOMContentLoaded', function () {
-    const menuToggle = document.getElementById('menuToggle');
+function openMenu() {
     const mobileMenu = document.getElementById('mobileMenu');
 
-    menuToggle.addEventListener('click', function () {
-        mobileMenu.style.display = mobileMenu.style.display === 'none' ? 'block' : 'none';
-    });
-});
+    mobileMenu.style.display = mobileMenu.style.display === 'none' ? 'block' : 'none';
+};

@@ -1,0 +1,116 @@
+:root {
+    --orange: #FE6613;
+    --blue: #1B2653;
+}
+
+header {
+    background-color: var(--blue);
+    color: white;
+    font-size: 0.7rem;
+    padding: 0 40px;
+    height: 50px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#btn {
+    background-color: var(--blue);
+    color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    padding: 7px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background-color: rgb(2, 44, 136);
+}
+
+#navLeft {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#navLeft img {
+    width: 90px;
+    margin-right: 40px;
+}
+
+#navRight {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    margin: 0 7px;
+    cursor: pointer;
+}
+
+ul li:hover {
+color: rgb(176, 197, 255);
+}
+
+/* Hamburger Menu */
+#menuToggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 40px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+#mobileMenu {
+    display: none;
+    background-color: var(--blue);
+    position: absolute;
+    top: 50px;
+    left: 0;
+    padding-bottom: 10px;
+    width: 100%;
+    z-index: 99;
+}
+
+#mobileMenu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    padding-right: 30px;
+    margin: 0;
+}
+
+#mobileMenu ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 900px){
+    #menuToggle {
+        display: flex;
+    }
+
+    #navLeft ul, #navRight ul {
+        display: none;
+    }
+}
