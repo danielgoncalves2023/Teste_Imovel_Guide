@@ -93,8 +93,10 @@ color: rgb(176, 197, 255);
 #modalContainer {
     margin: 50px;
     background-color: white;
+    z-index: 99;
 }
 
+/* Botão fechar modal */
 #modalContainer #closeModal {
     height: 30px;
     display: flex;
@@ -365,16 +367,16 @@ input {
 
 #btnImovelGuide {
     position: absolute;
-    bottom: 10px; /* Ajuste conforme necessário */
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--orange); /* Cor com opacidade */
+    background-color: var(--orange);
     opacity: 0.8;
     color: white;
-    padding: 10px 20px; /* Ajuste conforme necessário */
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    z-index: 1; /* Garante que o botão esteja sobreposto à imagem */
+    z-index: 1;
 }
 
 #btnImovelGuide:hover {
@@ -435,4 +437,82 @@ footer .footerRow img {
 
 footer .footerRow h4 {
     cursor: default;
+}
+
+/* Tablet */
+@media only screen and (max-width: 950px) {
+    .mainContainer {
+        display: grid;
+        /* display: none; */
+    
+        grid-template:
+        'area1 area2'
+        'area3 area4' 
+        'area5 area6';
+        grid-gap: 50px;
+        place-content: center;
+        margin: 40px 0;
+        width: 100%;
+        height: auto;
+    }
+
+    #modal {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        margin-top: -60px;
+        display: none;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    
+    #modalContainer {
+        margin: 50px;
+        background-color: white;
+        z-index: 99;
+    }
+
+    #imageModal {
+        margin: 30px 0;
+    }
+}
+
+/* Celulares */
+@media only screen and (max-width: 600px) {
+    .mainContainer {
+        display: grid;
+        /* display: none; */
+
+        grid-template:
+        'area1' 
+        'area2'
+        'area3' 
+        'area4' 
+        'area5'
+        'area6';
+        grid-gap: 50px;
+        place-content: center;
+        margin: 40px 0;
+        width: 100%;
+        height: auto;
+    }
+
+    #modal {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        margin-top: -60px;
+        display: none;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    #modalContainer {
+        margin: 40px;
+        height: 350px;
+        background-color: white;
+        z-index: 99;
+    }
+
+    #imageModal {
+        margin: 0;
+    }
 }
