@@ -19,7 +19,7 @@ contatoCorretor.addEventListener("click", () => {
 })
 
 // Janela total da página ao abrir modal
-const modal = document.getElementById('modal'); 
+const modal = document.getElementById('modal');
 
 function abrirModal() {
     modal.style.display = 'flex';
@@ -70,6 +70,11 @@ function downloadArea5() {
 // Menu Hamburger
 function openMenu() {
     const mobileMenu = document.getElementById('mobileMenu');
+    const computedStyle = window.getComputedStyle(mobileMenu);
 
-    mobileMenu.style.display = mobileMenu.style.display === 'none' ? 'block' : 'none';
-};
+    // Verifica se o menu está visível ou não com base no estilo computado
+    const isVisible = computedStyle.display !== 'none';
+
+    // Alterna a visibilidade do menu com base na verificação acima
+    mobileMenu.style.display = isVisible ? 'none' : 'block';
+}
