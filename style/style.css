@@ -255,12 +255,13 @@ input {
 }
 
 #btnImovelGuide {
+    display: grid;
+    justify-content: center;
     position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--orange);
-    opacity: 0.8;
+    bottom: 50px;
+    left: 30%;
+    /* translate-transform está bugando o screenshot do html2canvas */
+    background-color: rgba(247, 130, 20, 0.8);
     color: white;
     padding: 10px 20px;
     border: none;

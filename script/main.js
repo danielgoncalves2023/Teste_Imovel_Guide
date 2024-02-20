@@ -6,7 +6,7 @@ contatoCorretora.addEventListener("click", () => {
     contatoCorretora.innerText = '(11) 91111-1111';
     contatoCorretora.style.textDecoration = 'none';
     contatoCorretora.style.color = 'blue';
-    contatoCorretora.style.fontSize = '0.8rem';
+    contatoCorretora.style.fontSize = '0.7rem';
     contatoCorretora.style.fontWeight = '600';
 })
 
@@ -14,7 +14,7 @@ contatoCorretor.addEventListener("click", () => {
     contatoCorretor.innerText = '(11) 92222-2222';
     contatoCorretor.style.textDecoration = 'none';
     contatoCorretor.style.color = 'blue';
-    contatoCorretor.style.fontSize = '0.8rem';
+    contatoCorretor.style.fontSize = '0.7rem';
     contatoCorretor.style.fontWeight = '600';
 })
 
@@ -32,12 +32,17 @@ function fecharModal() {
 // Enviar mensagem do formulário
 function enviarMensagem() {
     var form = document.getElementById("form");
+    var telInput = document.getElementById("telInput");
+    var cpfInput = document.getElementById("cpfInput");
 
-    if (form.checkValidity()) {
+    // Os campos de CPF e telefone devem conter exatamente 14 characteres para serem validado.
+    if (
+        form.checkValidity() && telInput.length === 14 && cpfInput.length === 14
+        ) {
         alert('Mensagem enviada! Em breve retornaremos o contato.');
         form.submit();
     } else {
-        alert('Por favor, preencha todos os campos obrigatórios.');
+        alert('Por favor, preencha todos os campos corretamente.');
     }
 }
 
@@ -58,13 +63,15 @@ function calcular() {
 function downloadArea5() {
     var area5 = document.querySelector("#area5div1");
 
-    html2canvas(area5).then(function (canvas) {
+    html2canvas(area5)
+    .then(function (canvas) {
         var link = document.createElement('a');
 
         link.download = 'captura_de_tela.png';
         link.href = canvas.toDataURL();
         link.click();
     });
+
 }
 
 // Menu Hamburger

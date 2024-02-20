@@ -20,10 +20,12 @@ footer .footerRow {
 footer .footerRow p {
     margin: 0 5px;
     cursor: pointer;
+    transition: ease 1s;
 }
 
 footer .footerRow p:hover {
-color: rgb(176, 197, 255);
+    color: rgb(176, 197, 255);
+    transition: ease 0.5s;
 }
 
 footer .footerRow img {
@@ -37,7 +39,7 @@ footer .footerRow h4 {
 }
 
 /* Correção Responsiva do Footer */
-@media only screen and (max-width: 670px){
+@media only screen and (max-width: 670px) {
     footer {
         display: flex;
         flex-direction: column;

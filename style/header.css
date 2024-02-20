@@ -64,10 +64,12 @@ ul li {
     align-items: center;
     margin: 0 7px;
     cursor: pointer;
+    transition: ease 1s;
 }
 
 ul li:hover {
-color: rgb(176, 197, 255);
+    color: rgb(176, 197, 255);
+    transition: ease 0.5s;
 }
 
 /* Hamburger Menu */
@@ -109,6 +111,7 @@ color: rgb(176, 197, 255);
     text-align: center;
 }
 
+/* Aparecer em telas de até 900px */
 @media only screen and (max-width: 900px){
     #menuToggle {
         display: flex;
