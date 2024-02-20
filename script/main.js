@@ -42,13 +42,13 @@ function enviarMensagem() {
 }
 
 // Regra de 3
-var valor1 = document.getElementById('number1');
-var valor2 = document.getElementById('number2');
-var valor3 = document.getElementById('number3');
-var valor4 = document.getElementById('number4');
-
 function calcular() {
     event.preventDefault()
+
+    let valor1 = document.getElementById('number1');
+    let valor2 = document.getElementById('number2');
+    let valor3 = document.getElementById('number3');
+    let valor4 = document.getElementById('number4');
 
     let result = (valor3.value * valor2.value) / valor1.value;
     valor4.value = parseFloat(result)
